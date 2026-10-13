@@ -35,7 +35,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
     </header>
 
     <Transition name="fade" mode="out-in">
-      <ChapterSlide :key="chapter.id" v-bind="chapter" />
+      <ChapterSlide v-if="chapter" :key="chapter.id" v-bind="chapter" />
     </Transition>
 
     <nav class="deck__nav" aria-label="Navegação dos capítulos">
